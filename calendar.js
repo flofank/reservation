@@ -1,10 +1,37 @@
 
+function getStartDate() {
+  start = new Date();
+  start.setDate(1);
+  start.setMilliseconds(start.getMilliseconds() - 86400000 * (6 + start.getDay()));
+  return start;
+}
+
+function initCalendar() {
+  date = getStartDate();
+  var calendar = $(".calendar tbody");
+  html = "";
+  for (var w = 0; w < 7; w++) {
+    html += "<tr class=\"week\">";
+    for (var d = 0; d < 7; d++) {
+      html += "<td class=\"day";
+      if (date.getMonth() == 1) {
+        html += " bold";
+      }
+      html += "\" id=\"" + date.getYear() + "." + (date.getMonth() + 1) + "."+ date.getDate() + "\">" + date.getDate() + "</td>";
+      date.setMilliseconds(date.getMilliseconds() + 86400000);
+    }
+    html += "</tr>";
+  }
+  calendar.html(html);
+}
 
 function debug(string) {
   $("#debug").html(string);
 }
 
 $(document).ready(function() {
+  initCalendar();
+  
   $(".day").click(function() {
     if ($(this).hasClass("selected")) {
       $(this).removeClass("selected");
