@@ -1,0 +1,75 @@
+html, body {
+  height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 10px;
+	font-family: Tahoma;
+	font-size: 20px;
+}
+.calendar-wrapper {
+	margin: 0 auto;
+	width: 80%;
+	height: 80%;
+}
+.calendar {
+	width: 100%;
+	height: 100%;
+	border: 1px solid #CCCCCC;
+}
+.calendar th {
+	border: 1px solid #CCCCCC;
+	background-color: #DDDDDD;
+	color: white;
+	padding: 1px;	
+}
+.week {
+}
+
+.day {
+	width: 14%;
+	border: 1px solid #CCCCCC;
+	padding: 1px;
+}
+
+.day:hover {
+	padding: 0px;
+	border: 2px solid #888888;
+	background-color: #BBBBFF;
+}
+.selected {
+	background-color: #CCCCFF;	
+}
+
+.switch {
+	display: block;
+	width: 5%;
+	height: 0;
+	padding-bottom: 5%;
+	background-color: #CCCCFF;	
+	border: 4px solid #EEEEFF;
+	border-radius: 20%;
+	margin-bottom: 10px;
+	background: -webkit-linear-gradient(transparent 40%, rgba(0,0,0, 0.4) 100%),
+		-webkit-linear-gradient(45deg, #CCCCFF 40%, transparent 40%), 
+		-webkit-linear-gradient(315deg, #CCCCFF 40%, transparent 40%),
+		-webkit-linear-gradient(180deg, #CCCCFF 40%, white 40%);
+}
+.switch:hover {
+	border: 4px solid #BBBBCC;	
+	cursor: pointer;
+	background: -webkit-linear-gradient(transparent 20%, rgba(0,0,0, 0.6) 100%),
+		-webkit-linear-gradient(45deg, #CCCCFF 40%, transparent 40%), 
+		-webkit-linear-gradient(315deg, #CCCCFF 40%, transparent 40%),
+		-webkit-linear-gradient(180deg, #CCCCFF 40%, white 40%);
+}
+.back {
+	float: left;
+}
+.forth {
+	float: right;
+	-webkit-transform: scaleX(-1);
+}
+
+.nofloat {
+	float: none;
+}
