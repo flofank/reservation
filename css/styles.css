@@ -31,19 +31,48 @@ body {
     float: left;
     display: block;
     margin: 20px;
-    padding: 4px;
+    /*padding-top: 10px;*/
+    padding-bottom: 0px;
     /*border: 1px solid #888;*/
     box-shadow: 0px 0px 12px #888;
     border-radius: 10px;
-    background: -webkit-linear-gradient(#FFF 62%, #EEE 100%);
+    background: -webkit-linear-gradient(#FCFCFC 62%, #EEE 100%);
 }
 
 .menu {
     width: 20%;
     min-width: 120px;
-    min-height: 120px;
-    height: 60%;
 }
+
+.menu_item {
+/*    display: block;*/
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    overflow: hidden;
+    /*background: -webkit-linear-gradient(#FCFCFC 62%, #EEE 95%, #BBB);*/
+}
+
+.menu_item.top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.menu_item.bottom {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.menu_item span {
+    padding-left: 10px;
+}
+
+.menu_item:hover {
+    background: -webkit-linear-gradient(#BBB, #EEE 7%, #DDD 95%, #BBB);
+    /*background: -webkit-linear-gradient(#CCC, #EEE 5%, #EEE 62%, #CCC 95%, #FFF);*/
+    cursor: pointer;
+}
+
 
 .content {
     width: 60%;
