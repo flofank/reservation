@@ -1,0 +1,111 @@
+
+.calendar-wrapper {
+	margin: 0 auto;
+        padding: 8px;
+	width: 80%;
+	height: 80%;
+}
+.calendar {
+	width: 100%;
+	height: 100%;
+	border: 1px solid #BBB;
+}
+.calendar th {
+	font-size: 20pt;
+	border: 1px solid #BBB;
+/* 	background-color: #DDD; */
+/* 	background: -webkit-linear-gradient(rgba(200,200,255, 0.7) 20%, rgba(100,100,155, 0.7) 120%); */
+/* 	background: -webkit-linear-gradient(#CCF 20%, #66A 120%); */
+	background: -webkit-linear-gradient(transparent 40%, rgba(0,0,128, 0.4) 100%), #CCF;
+	color: white;
+	padding: 1px;	
+}
+.week {
+}
+
+.day {
+	width: 14%;
+	border: 1px solid #BBB;
+	padding: 1px;
+	color: #666;
+	padding: 4px;
+	vertical-align: top;
+}
+.day.bold {
+	font-weight: bold;
+}
+
+.day:hover {
+	padding: 3px;
+	border: 2px solid #888;
+	background-color: #BBF;
+}
+.selected {
+	background-color: #CCF;	
+}
+
+.switch {
+	display: block;
+/* 	width: 5%; */
+/* 	height: 0; */
+/* 	padding-bottom: 5%; */
+	height: 40pt;
+	width: 40pt;
+	background-color: #CCF;	
+	border: 4pt solid #EEF;
+	border-radius: 20%;
+	margin-bottom: 10px;
+	background: -webkit-linear-gradient(transparent 40%, rgba(0,0,128, 0.4) 100%),
+		-webkit-linear-gradient(45deg, #CCF 40%, transparent 40%), 
+		-webkit-linear-gradient(315deg, #CCF 40%, transparent 40%),
+		-webkit-linear-gradient(180deg, #CCF 40%, white 40%);
+        /*background: -webkit-linear-gradient(180deg, #CCF 40%, white 40%);*/
+}
+.switch:hover {
+	border: 4pt solid #BBC;	
+	cursor: pointer;
+	background: -webkit-linear-gradient(transparent 20%, rgba(0,0,128, 0.6) 100%),
+		-webkit-linear-gradient(45deg, #CCF 40%, transparent 40%), 
+		-webkit-linear-gradient(315deg, #CCF 40%, transparent 40%),
+		-webkit-linear-gradient(180deg, #CCF 40%, white 40%);
+}
+.back {
+	float: left;
+}
+.forth {
+	float: right;
+	-webkit-transform: scaleX(-1);
+}
+.month {
+	height: 10%;
+	min-height: 50pt;
+}
+.name {
+	display: block;
+	margin: 0 auto;
+	width: 200pt;
+	height: 42pt;
+	border: 2pt solid #CCF;
+	border-radius: 8pt;
+	text-align: center;
+	line-height: 40pt;
+	font-size: 24pt;
+	font-weight: bold;
+	color: #77A;
+	background: -webkit-linear-gradient(white 30%, rgba(200,200,255, 0.7) 120%);
+}
+
+
+.tripple_float .side {
+	display: block;
+/* 	background-color: green; */
+	float: left;
+	width: 33%;
+	height: 100%;
+}
+.tripple_float .mid {
+	display: block;
+	float: left;
+	width: 34%;
+	height: 100%;
+}
