@@ -24,7 +24,7 @@
             <div class="menu_item">
                 <span>Menu-Item 1</span>
             </div>
-            <div class="menu_item">
+            <div class="menu_item selected">
                 <span>Some other Menu-Item</span>
             </div>
             <div class="menu_item bottom">
@@ -33,7 +33,36 @@
         </div>
         
         <div class="widget">
-            Just some other widget
+            <div class="calendar-wrapper">
+                    <div class="month tripple_float">
+                            <div class="side">
+                                    <div class="switch back"></div>
+                            </div>
+                            <div class="mid">
+                                    <div class="name">FEBRUARY</div>
+                            </div>
+                            <div class="side">
+                                    <div class="switch forth"></div>
+                            </div>
+                            <div class="nofloat"></div>
+                    </div>
+                    <div class="nofloat"></div>
+                    <table class="calendar" cellspacing="0">
+                            <thead>
+                                    <tr>
+                                            <th>MO</th>
+                                            <th>TU</th>
+                                            <th>WE</th>
+                                            <th>TH</th>
+                                            <th>FR</th>
+                                            <th>SA</th>
+                                            <th>SU</th>
+                                    </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                    </table>
+            </div>
         </div>
     </div>
     
@@ -149,36 +178,6 @@ Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming 
 Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.   
 
 At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                </div>
-            <div class="calendar-wrapper" style="display: none">
-                    <div class="month tripple_float">
-                            <div class="side">
-                                    <div class="switch back"></div>
-                            </div>
-                            <div class="mid">
-                                    <div class="name">FEBRUARY</div>
-                            </div>
-                            <div class="side">
-                                    <div class="switch forth"></div>
-                            </div>
-                            <div class="nofloat"></div>
-                    </div>
-                    <div class="nofloat"></div>
-                    <table class="calendar" cellspacing="0">
-                            <thead>
-                                    <tr>
-                                            <th>MO</th>
-                                            <th>TU</th>
-                                            <th>WE</th>
-                                            <th>TH</th>
-                                            <th>FR</th>
-                                            <th>SA</th>
-                                            <th>SU</th>
-                                    </tr>
-                            </thead>
-                            <tbody>
-                            </tbody>
-                    </table>
             </div>        
         </div>
     </div>

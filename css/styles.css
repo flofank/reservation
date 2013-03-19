@@ -51,7 +51,7 @@ input.search:focus {
 
 .content_left {
     width: 20%;
-    min-width: 120px;
+    min-width: 280px;
 }
 
 .content_right {
@@ -97,9 +97,14 @@ input.search:focus {
     padding-left: 20px;
 }
 
+.menu_item.selected {
+    background: -webkit-linear-gradient(#141, #18AA18 7%, #095509 95%, #141);  
+    border-bottom: 1px solid #18AA18;  
+}
+
 .menu_item:hover {
-/*    background: -webkit-linear-gradient(#BBB, #EEE 7%, #DDD 95%, #BBB);*/
-    background: -webkit-linear-gradient(#141, #18AA18 7%, #095509 95%, #141);
+    background: -webkit-linear-gradient(#095509, #4D4 7%, #18AA18 95%, #18AA18);
+    border-bottom: 1px solid #18AA18;
     cursor: pointer;
 }
 
