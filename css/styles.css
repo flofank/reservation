@@ -108,6 +108,10 @@ input.search:focus {
     cursor: pointer;
 }
 
+.menu_item.bottom:hover {
+    border-bottom: none;
+}
+
 .content {
     width: 100%;
     height: 100%;

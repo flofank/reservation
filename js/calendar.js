@@ -1,16 +1,43 @@
 var selectedMonth;
 var selectedYear;
 
-function getStartDate(month, year) {
-  start = new Date(year, month, 1);
-  start.setTime(start.getTime() - 86400000 * (6 + start.getDay()));
-  return start;
+
+var $CALENDAR = new Calendar();
+
+function Calendar() {
+    this.selectedMonth = (new Date()).getMonth();
+    this.selectedYear = (new Date()).getFullYear();
+    showMonth();
 }
-function getEndDate(month, year) {
-  start = getStartDate(month, year);
-	end = new Date(start.getTime() + 48 * 86400000);
-	return end;
-}
+
+$CALENDAR.getStartDate = function(month, year) {
+    start = new Date(year, month, 1);
+    start.setTime(start.getTime() - 86400000 * (6 + start.getDay()));
+    return start;
+};
+
+$CALENDAR.getEndDate = function(month, year) {
+    start = getStartDate(month, year);
+    end = new Date(start.getTime() + 48 * 86400000);
+    return end;
+};
+
+$CALENDAR.showMonth = function() {
+    var date = getStartDate(selectedMonth, selectedYear);
+    var html = "";
+    for (var w = 0; w < 7; w++) {
+        html += getWeekHtml(new Date(date.getTime()));
+        date.setDate(date.getDate() + 7);
+    }
+    $(".calendar tbody").html(html);
+    $(".y" + selectedYear + ".m" + selectedMonth).addClass("bold");    
+};
+
+
+
+/////////////////////////////////////////
+// Old methods
+////////////////////////////////////////
 
 function initCalendar() {
   selectedMonth = (new Date()).getMonth();
@@ -64,6 +91,8 @@ function nextMonth() {
   } 
   slideWeeksUp(switchcount);
   $(".y" + selectedYear + ".m" + selectedMonth).addClass("bold");
+  
+    bindSelectionEvent();
 }
 
 function slideWeeksUp(num) {
@@ -83,6 +112,15 @@ function debug(string) {
 $(document).ready(function() {
   initCalendar();
   
+    bindSelectionEvent();
+  
+  $(".forth").click(function() {
+    nextMonth();
+  });
+});
+
+function bindSelectionEvent() {
+  $(".day").off('click');
   $(".day").click(function() {
     if ($(this).hasClass("selected")) {
       $(this).removeClass("selected");
@@ -90,11 +128,7 @@ $(document).ready(function() {
       $(this).addClass("selected");
     }
   });
-  
-  $(".forth").click(function() {
-    nextMonth();
-  });
-});
+}
 
 
 /////////////////////////////////
