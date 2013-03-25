@@ -4,8 +4,11 @@ var selectedYear;
 
 $('document').ready(function() {
     $CALENDAR.showMonth();
-    $(".forth").click(function() {$CALENDAR.nextMonth()});
-    $(".back").click(function() {$CALENDAR.previousMonth()});
+    $.getJSON('json/reservations.json', function(data) {
+        $CALENDAR.setReservations(data);
+    });
+    $(".forth").click(function() {$CALENDAR.nextMonth();});
+    $(".back").click(function() {$CALENDAR.previousMonth();});
 });
 
 var $CALENDAR = new Calendar();
@@ -16,14 +19,14 @@ function Calendar() {
     this.selectedYear = (new Date()).getFullYear();
 }
 
-$CALENDAR.getStartDate = function(month, year) {
-    start = new Date(year, month, 1);
+$CALENDAR.getStartDate = function() {
+    start = new Date(this.selectedYear, this.selectedMonth, 1);
     start.setDate(start.getDate() - 6 - start.getDay());
     return start;
 };
 
-$CALENDAR.getEndDate = function(month, year) {
-    start = this.getStartDate(month, year);
+$CALENDAR.getEndDate = function() {
+    start = this.getStartDate();
     end = new Date(start.getTime() + 48 * 86400000);
     return end;
 };
@@ -31,7 +34,7 @@ $CALENDAR.getEndDate = function(month, year) {
 $CALENDAR.showMonth = function() {
     $(".week").remove();
     $(".month .name").html(this.monthNames[this.selectedMonth] + ", " + this.selectedYear);
-    var startdate = this.getStartDate(this.selectedMonth, this.selectedYear);
+    var startdate = this.getStartDate();
     var html = "";
     for (var w = 0; w < 7; w++) {
         html += this.getWeekHtml(new Date(startdate.getTime()));
@@ -40,6 +43,7 @@ $CALENDAR.showMonth = function() {
     $(".calendar tbody").html(html);
     $(".y" + this.selectedYear + ".m" + this.selectedMonth).addClass("bold");   
     this.bindSelectionEvent();
+    this.markReservations();
 };
 
 $CALENDAR.getWeekHtml = function(startdate) {
@@ -88,9 +92,49 @@ $CALENDAR.bindSelectionEvent = function() {
   });
 };
 
+$CALENDAR.setReservations = function(reservations) {
+  this.reservations = reservations;
+};
 
-
-
+$CALENDAR.markReservations = function() {
+    var calStartDate = this.getStartDate();
+    var calEndDate = this.getEndDate();
+    for (i in this.reservations) {
+        var resStartDate = new Date(this.reservations[i].startDate);
+        var resEndDate = new Date(this.reservations[i].endDate);
+        if (resStartDate > calEndDate ) {
+            break;
+        }
+        if (resEndDate < calStartDate) {
+            continue;
+        }
+        if (resStartDate < calStartDate) {
+            resStartDate = calStartDate;
+        }
+        if (resEndDate > calEndDate) {
+            resEndDate = calEndDate;
+        }
+        while(resStartDate.getYear() < resEndDate.getYear() || resStartDate.getMonth() < resEndDate.getMonth() || resStartDate.getDate() <= resEndDate.getDate()) {
+            console.log(resStartDate);
+            $(".day.y" + resStartDate.getFullYear() + ".m" + resStartDate.getMonth() + ".d" + resStartDate.getDate()).addClass("booked");
+            resStartDate.setDate(resStartDate.getDate() + 1);
+        }
+//        if (resStartDate < calStartDate) {
+//            if (resEndDate < calEndDate) {
+//                $(".day").first().nextUntil(".day.y" + resEndDate.getFullYear() + ".m" + resEndDate.getMonth() + ".d" + resEndDate.getDate()).addClass("booked");
+//                this.markReservations(startDate, resEndDate)
+//            } else {
+//                $(".day").addClass("booked");
+//            }
+//        } else if (resEndDate < calEndDate) {
+//            console.log(".day.y" + resEndDate.getFullYear() + ".m" + resEndDate.getMonth() + ".d" + resEndDate.getDate());
+//            $(".day.y" + resStartDate.getFullYear() + ".m" + resStartDate.getMonth() + ".d" + resStartDate.getDate())
+//                    .nextUntil(".day.y" + resEndDate.getFullYear() + ".m" + resEndDate.getMonth() + ".d" + resEndDate.getDate()).addClass("booked");
+//        } else {
+//            $(".day.y" + resEndDate.getFullYear() + ".m" + resEndDate.getMonth() + ".d" + resEndDate.getDate()).nextUntil().addClass("booked");
+//        }
+    }
+};
 
 /////////////////////////////////////////
 // Old methods

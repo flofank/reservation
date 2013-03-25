@@ -35,8 +35,11 @@
 	background-color: #8D8;
         cursor: pointer;
 }
-.selected {
+.day.selected {
 	background-color: #AFA;	
+}
+.day.booked {
+        background-color: #FAA;
 }
 
 .switch {

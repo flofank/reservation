@@ -82,6 +82,10 @@ input.search:focus {
     border-bottom: 1px solid #D8D8D8;
 }
 
+.menu_item span {
+    padding-left: 20px;
+}
+
 .menu_item.top {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -90,16 +94,6 @@ input.search:focus {
 .menu_item.bottom {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    border-bottom: none;
-}
-
-.menu_item span {
-    padding-left: 20px;
-}
-
-.menu_item.selected {
-    background: -webkit-linear-gradient(#141, #18AA18 7%, #095509 95%, #141);  
-    border-bottom: 1px solid #18AA18;  
 }
 
 .menu_item:hover {
@@ -108,9 +102,15 @@ input.search:focus {
     cursor: pointer;
 }
 
-.menu_item.bottom:hover {
-    border-bottom: none;
+.menu_item.selected {
+    background: -webkit-linear-gradient(#141, #18AA18 7%, #095509 95%, #141);  
+    border-bottom: 1px solid #18AA18;  
 }
+
+.menu_item.selected:hover {
+    background: -webkit-linear-gradient(#141, #18AA18 7%, #095509 95%, #141);  
+    border-bottom: 1px solid #18AA18;  
+} 
 
 .content {
     width: 100%;

@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <script src="js/jquery.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/calendar.js"></script>
 <link rel="stylesheet" type="text/css" href="css/styles.css" />
 <link rel="stylesheet" type="text/css" href="css/calendar.css" />
@@ -24,10 +25,10 @@
             <div class="menu_item">
                 <span>Menu-Item 1</span>
             </div>
-            <div class="menu_item selected">
+            <div class="menu_item">
                 <span>Some other Menu-Item</span>
             </div>
-            <div class="menu_item bottom">
+            <div class="menu_item bottom ">
                 <span>Some other Menu-Item</span>
             </div>
         </div>
@@ -51,12 +52,12 @@
                             <thead>
                                     <tr>
                                             <th>MO</th>
-                                            <th>TU</th>
-                                            <th>WE</th>
-                                            <th>TH</th>
+                                            <th>DI</th>
+                                            <th>MI</th>
+                                            <th>DO</th>
                                             <th>FR</th>
                                             <th>SA</th>
-                                            <th>SU</th>
+                                            <th>SO</th>
                                     </tr>
                             </thead>
                             <tbody>
