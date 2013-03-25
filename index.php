@@ -19,7 +19,7 @@
     <div class="page_content content_left">
         <div class="widget menu">
             <div class="menu_item top">
-                <span>Menu</span>
+                <span>Informationen</span>
             </div>
             <div class="menu_item">
                 <span>Menu-Item 1</span>
