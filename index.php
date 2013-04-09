@@ -1,17 +1,19 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<script src="js/jquery.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
-<script type="text/javascript" src="js/calendar.js"></script>
-<link rel="stylesheet" type="text/css" href="css/styles.css" />
-<link rel="stylesheet" type="text/css" href="css/calendar.css" />
-<title>Insert title here</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/calendar.js"></script>
+    <script type="text/javascript" src="slider/js-image-slider.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/calendar.css" />
+    <link rel="stylesheet" type="text/css" href="slider/js-image-slider.css"/>
+    <title>Insert title here</title>
 </head>
 <body>
     <div id="head">
-        Header
+        Reservationssystem Ferienwohnung
     </div>
     <div id="content">
         <div class="widget">
@@ -24,10 +26,21 @@
         </div>
         <div class="widget">
             <div class="head down">
-                Some widget
+                Fotos
             </div>
-            <div class="content">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            <div class="content" >
+                <div id="sliderFrame">
+                    <div id="slider">
+                        <img src="images/image-slider-1.jpg" alt="Welcome to Menucool.com" />
+                        <img src="images/image-slider-2.jpg" alt="" />
+                        <img src="images/image-slider-3.jpg" alt="Pure Javascript. No jQuery. No flash." />
+                        <img src="images/image-slider-4.jpg" alt="#htmlcaption" />
+                        <img src="images/image-slider-5.jpg" />
+                    </div>
+                    <div id="htmlcaption" style="display: none;">
+                        <em>HTML</em> caption. Link to <a href="http://www.google.com/">Google</a>.
+                    </div>
+                </div>
             </div>
         </div>
         <div class="widget">
