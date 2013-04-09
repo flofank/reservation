@@ -4,8 +4,9 @@
  */
 
 $('document').ready(function() {
-   $('.widget .head').click(function() {
-       $(this).parent().children('.content').slideToggle();
+   $('.menu_item').click(function() {
+       $('.selected').removeClass("selected");
+       $(this).addClass("selected");
    });
 });
 

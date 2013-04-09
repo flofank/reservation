@@ -10,7 +10,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-    <div class="page_head">
+    <div class="page_head" style="">
         <div>BOOK ME</div>
         <div>
             <input class="search" type="search" name="localsearch"/>

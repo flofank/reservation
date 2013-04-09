@@ -10,39 +10,67 @@
 <title>Insert title here</title>
 </head>
 <body>
-    <div class="page_head">
-        <div>BOOK ME</div>
-        <div>
-            <input class="search" type="search" name="localsearch"/>
-        </div>
+    <div id="head">
+        Header
     </div>
-    
-    <div class="page_content content_left">
-        <div class="widget menu">
-            <div class="menu_item top">
-                <span>Informationen</span>
+    <div id="content">
+        <div class="widget">
+            <div class="head down">
+                Some widget
             </div>
-            <div class="menu_item">
-                <span>Menu-Item 1</span>
-            </div>
-            <div class="menu_item">
-                <span>Some other Menu-Item</span>
-            </div>
-            <div class="menu_item bottom ">
-                <span>Some other Menu-Item</span>
+            <div class="content">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
             </div>
         </div>
-    </div>
-    
-    <div class="page_content content_right">
-        <div class="widget content">
-            <div class="scrollable">
+        <div class="widget">
+            <div class="head down">
+                Some widget
+            </div>
+            <div class="content">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </div>
+        </div>
+        <div class="widget">
+            <div class="head down">
+                Belegung
+            </div>
+            <div class="content">
+                <div class="calendar-wrapper">
+                    <div class="month tripple_float">
+                            <div class="side">
+                                    <div class="switch back"></div>
+                            </div>
+                            <div class="mid">
+                                    <div class="name">FEBRUARY</div>
+                            </div>
+                            <div class="side">
+                                    <div class="switch forth"></div>
+                            </div>
+                            <div class="nofloat"></div>
+                    </div>
+                    <div class="nofloat"></div>
+                    <table class="calendar" cellspacing="0">
+                            <thead>
+                                    <tr>
+                                            <th>MO</th>
+                                            <th>DI</th>
+                                            <th>MI</th>
+                                            <th>DO</th>
+                                            <th>FR</th>
+                                            <th>SA</th>
+                                            <th>SO</th>
+                                    </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
-    
-    
-    <div class="nofloat"></div>
-    <div id="debug"></div>
+    <div id="foot">
+        &copy; 2013 by Florian Fankhauser
+    </div>
+        
 </body>
 </html>
