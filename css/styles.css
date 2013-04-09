@@ -19,7 +19,7 @@ body {
     height: 40px;
     background: #AAC;
     border-bottom: 1px solid #88C;
-    color: #FFF;
+    color: #F8F8FF;
     line-height: 40px;
     font-size: 20pt;
     padding-left: 18px;
@@ -33,20 +33,25 @@ body {
     width: 70%;
     min-width: 600px;
     max-width: 900px;
-    padding-top: 40px;
-    padding-bottom: 80px;
+    /*padding-top: 40px;*/
+    /*padding-bottom: 80px;*/
     border-left: 1px solid #CCC;
     border-right: 1px solid #CCC;
     border-bottom: 1px solid #CCC;
 }
 
+#content>.title {
+    font-size: 18pt;
+    font-weight: bold;
+    padding: 40px;
+}
+
 .widget {
-    margin-bottom: 20px;
     border-top: 1px solid #DDD;
 }
 
 .widget .head {
-    padding-left: 60px;
+    padding-left: 70px;
     background: #EEE;
     line-height: 30px;
     font-size: 13pt;
@@ -55,24 +60,52 @@ body {
     background-image: url('http://www.ppcps.de/images/android/TOOLS/Cameron-Murphy/icon/Toggle-Data-Widget_icon.png');
     background-repeat: no-repeat;
     background-size: 20px;
-    background-position: 30px;
+    background-position: 40px;
+    cursor: pointer;
 }
 
 .widget .content {
     width: 100%;
+    margin-bottom: 20px;
     padding-top: 20px;
     padding-left: 40px;
     padding-right: 40px;
     display: none;
-    /*background: #F6F6F6;*/
     color: #444;
 }
 
-#foot {
+#foot { 
     margin: 0 auto;
+    padding-bottom: 20px;
     text-align: right;
     width: 70%;
+    max-width: 900px;
     padding-top: 10px;
     color: #AAA;
     font-size: 8pt;
+}
+
+a.file {
+    background-image: url('../images/file-icons.gif');
+    background-size: 176px; /* 8 times line-height*/
+    display: inline-block;
+    padding-left: 22px;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    background-repeat: repeat;
+    text-decoration: none;
+}
+
+a.file:hover {
+    color: black;
+}
+
+a.file.pdf {
+    background-position: 130px 154px;
+}
+
+ul {
+    padding-top: 0;
+    margin-top: 0;
 }

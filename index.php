@@ -13,19 +13,35 @@
 </head>
 <body>
     <div id="head">
-        Reservationssystem Ferienwohnung
+        Reservationssystem Ferienwohnungen
     </div>
     <div id="content">
+        <div class="title">
+            Casa Capuns<br/><br/>
+            <img src="images/casa_capuns.png" alt="Casa Capuns" style="width: 300px"/>
+        </div>
         <div class="widget">
-            <div class="head down">
-                Some widget
+            <div class="head">
+                Beschreibung
             </div>
             <div class="content">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                <ul>
+                    <li>Entr&eacute;e mit separatem Eingang &uuml;ber Aussentreppe</li>
+                    <li>Wohnzimmer mit Essplatz und K&uuml;che</li>
+                    <li>Schlafzimmer mit Doppelbett und Schrank</li>
+                    <li>Dusche/WC</li>
+                    <li>Kleiner Balkon Richtung S&uuml;den</li>
+                    <li>Kellerraum und Waschk&uuml;che mit Waschmaschine und Tumbler</li>
+                    <li>Schlafm&ouml;glichkeiten f&uuml;r 4 - 5 Personen: Schlafzimmer mit 
+                    Doppelbett, Wohnzimmer mit Bettsofa ausziehbar f&uuml;r 2 Personen, 
+                    zus&auml;tzliche Schlafm&ouml;glichkeit mit mobilem Klappbett</li>
+                    <li>Beheizt mit Elektroheizung und/oder Holzofen aus Speckstein</li>
+                    <li>Parkm&ouml;glichkeit in Autounterstand</li>
+                </ul>
             </div>
         </div>
         <div class="widget">
-            <div class="head down">
+            <div class="head">
                 Fotos
             </div>
             <div class="content" >
@@ -44,8 +60,16 @@
             </div>
         </div>
         <div class="widget">
-            <div class="head down">
-                Belegung
+            <div class="head">
+                Downloads
+            </div>
+            <div class="content">
+                <a href="\Casa_Capuns.pdf" target="blank" class="file pdf">Dokumentation</a>
+            </div>
+        </div>
+        <div class="widget">
+            <div class="head">
+                Reservationen
             </div>
             <div class="content">
                 <div class="calendar-wrapper">

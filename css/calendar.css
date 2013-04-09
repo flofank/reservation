@@ -1,5 +1,6 @@
 
 .calendar-wrapper {
+        max-width: 300px;
 	margin: 0 auto;
         font-size: 11pt;
 }
