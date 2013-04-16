@@ -5,10 +5,9 @@
     <script src="js/jquery.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/calendar.js"></script>
-    <script type="text/javascript" src="slider/js-image-slider.js"></script>
+    <script type="text/javascript" src="galleria/galleria-1.2.9.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <link rel="stylesheet" type="text/css" href="css/calendar.css" />
-    <link rel="stylesheet" type="text/css" href="slider/js-image-slider.css"/>
     <title>Insert title here</title>
 </head>
 <body>
@@ -61,7 +60,34 @@
                 Reservationsanfrage
             </div>
             <div class="content">
-                
+                <table class="form">
+                    <form action="" autocomplete="on">
+                        <tr>
+                            <td>Name:</td>
+                            <td><input type="text" size="40" placeholder="Name" required="true"></input></td>
+                        </tr>
+                        <tr>
+                            <td>E-Mail:</td>
+                            <td><input type="email" size="40" placeholder="E-Mail"></input></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Reservationszeit:
+                            </td>
+                            <td>
+                                <input type="datetime" required="true" placeholder="Von"></input> 
+                                bis 
+                                <input type="datetime" required="true" placeholder="Bis"></input>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Reservationsmitteilung:</td><td><textarea cols="50" rows="10"></textarea></td></tr>
+                        </tr>
+                        <tr>
+                            <td></td><td><input type="submit" value="Anfrage abschicken"/></td>
+                        </tr>
+                    </form>
+                </table>                
             </div>
         </div>
         <div class="widget">
@@ -89,17 +115,14 @@
                 Fotos
             </div>
             <div class="content" >
-                <div id="sliderFrame">
-                    <div id="slider">
-                        <img src="images/image-slider-1.jpg" alt="Welcome to Menucool.com" />
-                        <img src="images/image-slider-2.jpg" alt="" />
-                        <img src="images/image-slider-3.jpg" alt="Pure Javascript. No jQuery. No flash." />
-                        <img src="images/image-slider-4.jpg" alt="#htmlcaption" />
-                        <img src="images/image-slider-5.jpg" />
-                    </div>
-                    <div id="htmlcaption" style="display: none;">
-                        <em>HTML</em> caption. Link to <a href="http://www.google.com/">Google</a>.
-                    </div>
+                <div id="galleria">
+                    <img src="images/1.png" />
+                    <img src="images/2.png" />
+                    <img src="images/3.png" />
+                    <img src="images/4.png" />
+                    <img src="images/5.png" />
+                    <img src="images/6.png" />
+                    <img src="images/7.png" data-title="Welcome to Menucool.com" data-description="description"/>
                 </div>
             </div>
         </div>
