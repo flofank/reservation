@@ -17,7 +17,7 @@
     <div id="content">
         <div class="head">
             <div class="title">
-                Casa Capuns                
+                Casa Capuns (Disentis)             
             </div>
             <div class="left center">
                 <img src="images/casa_capuns.png" alt="Casa Capuns" style="width: 300px"/>
