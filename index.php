@@ -16,12 +16,14 @@
         Reservationssystem Ferienwohnungen
     </div>
     <div id="content">
-        <div class="title">
-            Casa Capuns<br/><br/>
+        <div class="head">
+            <div class="title">
+                Casa Capuns                
+            </div>
             <div class="left center">
                 <img src="images/casa_capuns.png" alt="Casa Capuns" style="width: 300px"/>
             </div>
-            <div class="left center">
+            <div class="right center">
                 <div class="calendar-wrapper">
                     <div class="month tripple_float">
                             <div class="side">

@@ -40,10 +40,14 @@ body {
     border-bottom: 1px solid #CCC;
 }
 
-#content>.title {
+#content>.head {
+    padding: 40px;
+}
+
+#content>.head .title {
     font-size: 18pt;
     font-weight: bold;
-    padding: 40px;
+    padding-bottom: 20px;
 }
 
 .widget {
@@ -111,15 +115,17 @@ ul {
 }
 
 .left {
+    display: block;
     float: left;
     width: 50%;
     overflow: hidden;
 }
 
 .right {
+    display: block;
+    width: 50%;
     padding-left: 10px;
     float: right;
-    width: 50%;
     overflow: hidden;
 }
 

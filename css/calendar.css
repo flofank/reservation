@@ -14,12 +14,20 @@
 .calendar td {
         width: 14%;
         padding: 4px;
-        border-top: 1px solid #CCE;
+        border-top: 1px solid #CCC;
         /*border-left: 1px solid #BBB;*/
         /*border-bottom: 1px solid #BBB;*/
 }
-.calendar th {
+.calendar td:nth-child(even) {
+        border-left: 1px solid #CCC;
+        border-right: 1px solid #CCC;
+}
+.calendar td:nth-child(n+6) {
         background: #EEF;
+}
+
+.calendar th {
+        background: #DDE;
 	padding: 1px;	
 }
 .week {
@@ -31,9 +39,14 @@
 .day.bold {
 	font-weight: bold;
 }
-.day.booked {
-        background-color: #FBB;
+.day.booked, .calendar td:nth-child(n+6).day.booked {
+        background: #FAA;
+        color: #444;
 }
+/*.day.booked.bold, .calendar td:nth-child(n+6).day.booked.bold {
+        background: #D88;
+        color: #444;
+}*/
 
 .switch {
 	display: block;
