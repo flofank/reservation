@@ -18,7 +18,49 @@
     <div id="content">
         <div class="title">
             Casa Capuns<br/><br/>
-            <img src="images/casa_capuns.png" alt="Casa Capuns" style="width: 300px"/>
+            <div class="left center">
+                <img src="images/casa_capuns.png" alt="Casa Capuns" style="width: 300px"/>
+            </div>
+            <div class="left center">
+                <div class="calendar-wrapper">
+                    <div class="month tripple_float">
+                            <div class="side">
+                                    <div class="switch back"></div>
+                            </div>
+                            <div class="mid">
+                                    <div class="name">FEBRUARY</div>
+                            </div>
+                            <div class="side">
+                                    <div class="switch forth"></div>
+                            </div>
+                            <div class="nofloat"></div>
+                    </div>
+                    <table class="calendar" cellspacing="0">
+                            <thead>
+                                    <tr>
+                                            <th>MO</th>
+                                            <th>DI</th>
+                                            <th>MI</th>
+                                            <th>DO</th>
+                                            <th>FR</th>
+                                            <th>SA</th>
+                                            <th>SO</th>
+                                    </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                    </table>
+                </div>                
+            </div>
+            <div class="clearfloat"></div>
+        </div>
+        <div class="widget">
+            <div class="head">
+                Reservationsanfrage
+            </div>
+            <div class="content">
+                
+            </div>
         </div>
         <div class="widget">
             <div class="head">
@@ -65,43 +107,6 @@
             </div>
             <div class="content">
                 <a href="\Casa_Capuns.pdf" target="blank" class="file pdf">Dokumentation</a>
-            </div>
-        </div>
-        <div class="widget">
-            <div class="head">
-                Reservationen
-            </div>
-            <div class="content">
-                <div class="calendar-wrapper">
-                    <div class="month tripple_float">
-                            <div class="side">
-                                    <div class="switch back"></div>
-                            </div>
-                            <div class="mid">
-                                    <div class="name">FEBRUARY</div>
-                            </div>
-                            <div class="side">
-                                    <div class="switch forth"></div>
-                            </div>
-                            <div class="nofloat"></div>
-                    </div>
-                    <div class="nofloat"></div>
-                    <table class="calendar" cellspacing="0">
-                            <thead>
-                                    <tr>
-                                            <th>MO</th>
-                                            <th>DI</th>
-                                            <th>MI</th>
-                                            <th>DO</th>
-                                            <th>FR</th>
-                                            <th>SA</th>
-                                            <th>SO</th>
-                                    </tr>
-                            </thead>
-                            <tbody>
-                            </tbody>
-                    </table>
-                </div>
             </div>
         </div>
     </div>

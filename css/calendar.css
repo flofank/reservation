@@ -1,68 +1,57 @@
-
 .calendar-wrapper {
-        max-width: 300px;
-	margin: 0 auto;
         font-size: 11pt;
+        color: #666;
+        width: 90%;
 }
 .calendar {
-	width: 100%;
-	height: 100%;
-	border: 1px solid #BBB;
+        border: 1px solid #AAC;
+        border-radius: 2px;
+        width: 100%;
+}
+.calendar thead th {
+        /*border: 1px solid #BBB;*/
+}
+.calendar td {
+        width: 14%;
+        padding: 4px;
+        border-top: 1px solid #CCE;
+        /*border-left: 1px solid #BBB;*/
+        /*border-bottom: 1px solid #BBB;*/
 }
 .calendar th {
-	border: 1px solid #BBB;
-        background: -webkit-linear-gradient(transparent, rgba(32,32,32, 0.4) 100%);
-        /*background: -webkit-linear-gradient(transparent 40%, rgba(0,0,128, 0.4) 100%), #4D4;*/
-	color: #666;
+        background: #EEF;
 	padding: 1px;	
 }
 .week {
 }
-
 .day {
-	border: 1px solid #BBB;
         text-align: right;
-	color: #666;
-	padding: 4px;
 	vertical-align: top;
 }
 .day.bold {
 	font-weight: bold;
 }
-
-.day:hover {
-	padding: 3px;
-	border: 2px solid #888;
-	background-color: #8D8;
-        cursor: pointer;
-}
-.day.selected {
-	background-color: #AFA;	
-}
 .day.booked {
-        background-color: #FAA;
+        background-color: #FBB;
 }
 
 .switch {
 	display: block;
 	height: 20pt;
 	width: 20pt;
-	background-color: #CCF;	
-	border: 2pt solid #EEF;
-	border-radius: 20%;
+	border: 1pt solid #AAC;
+	border-radius: 2px;
 	margin-bottom: 10px;
-	background: -webkit-linear-gradient(transparent 40%, rgba(0,0,128, 0.4) 100%),
-		-webkit-linear-gradient(45deg, #4D4 40%, transparent 40%), 
-		-webkit-linear-gradient(315deg, #4D4 40%, transparent 40%),
-		-webkit-linear-gradient(180deg, #4D4 40%, white 40%);
+	background: -webkit-linear-gradient(45deg, #DDF 40%, transparent 40%), 
+		-webkit-linear-gradient(315deg, #DDF 40%, transparent 40%),
+		-webkit-linear-gradient(180deg, #DDF 40%, white 40%);
 }
 .switch:hover {
-	border: 2pt solid #BBC;	
+	border: 1pt solid #88C;	
 	cursor: pointer;
-	background: -webkit-linear-gradient(transparent 20%, rgba(0,0,128, 0.6) 100%),
-		-webkit-linear-gradient(45deg, #18AA18 40%, transparent 40%), 
-		-webkit-linear-gradient(315deg, #18AA18 40%, transparent 40%),
-		-webkit-linear-gradient(180deg, #18AA18 40%, white 40%);
+	background: -webkit-linear-gradient(45deg, #CCE 40%, transparent 40%), 
+		-webkit-linear-gradient(315deg, #CCE 40%, transparent 40%),
+		-webkit-linear-gradient(180deg, #CCE 40%, white 40%);
 }
 .back {
 	float: left;
@@ -72,29 +61,23 @@
 	-webkit-transform: scaleX(-1);
 }
 .month {
-	height: 10%;
-        width: 100%;
-	/*min-height: 50pt;*/
 }
 .name {
 	display: block;
 	margin: 0 auto;
 	width: 100%;
-	border: 2pt solid #888;
-	border-radius: 8pt;
+	border: 1pt solid #AAC;
+        border-radius: 2px;
 	text-align: center;
 	line-height: 20pt;
 	font-weight: bold;
-        color: #666;
-	background: -webkit-linear-gradient(white 30%, #888 150%);
-/*	color: #18AA18;
-	background: -webkit-linear-gradient(white 30%, #4D4 150%);*/
+        color: #556;
+        background-color: #DDF;
 }
 
 
 .tripple_float .side {
 	display: block;
-/* 	background-color: green; */
 	float: left;
 	width: 20%;
 	height: 100%;
@@ -104,4 +87,4 @@
 	float: left;
 	width: 60%;
 	height: 100%;
-}
+}x
