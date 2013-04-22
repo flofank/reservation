@@ -3,11 +3,11 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <script src="js/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/calendar.css" />
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/calendar.js"></script>
     <script type="text/javascript" src="galleria/galleria-1.2.9.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <link rel="stylesheet" type="text/css" href="css/calendar.css" />
     <title>Insert title here</title>
 </head>
 <body>
