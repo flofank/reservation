@@ -75,9 +75,9 @@
                                 Reservationszeit:
                             </td>
                             <td>
-                                <input type="datetime" required="true" placeholder="Von"></input> 
+                                <input type="date" required="true" placeholder="Von"></input> 
                                 bis 
-                                <input type="datetime" required="true" placeholder="Bis"></input>
+                                <input type="date" required="true" placeholder="Bis"></input>
                             </td>
                         </tr>
                         <tr>
