@@ -77,6 +77,10 @@ body {
     color: #444;
 }
 
+.widget.visible .content {
+    display: block;
+}
+
 #foot { 
     margin: 0 auto;
     padding-bottom: 20px;
