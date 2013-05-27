@@ -19,6 +19,9 @@
             <div class="title">
                 Objekt erstellen
             </div>
+            <div id="hintbox" class="green hidden">
+                Hier steht ein Hinweis zu den gemachten Eingaben.
+            </div>
             <table class="form">
                 <tr>
                     <td>Bezeichnung</td>
@@ -28,9 +31,25 @@
                     <td>Beschreibung</td>
                     <td><textarea cols="50" rows="10" name="beschreibung"></textarea></td>
                 </tr>
+                <tr>
+                    <td/>
+                    <td>
+                        <input type="submit" id="create" name="create" class="saveObjectButton" value="Objekt erstellen"/>
+                        <input type="submit" id="save" name="save" class="saveObjectButton hidden" value="Änderungen speichern"/>
+                    </td>
+                </tr>
             </table>
         </div>
-        <div class="widget visible">
+        <div id="links" class="widget" style="display: none">
+            <div class="head">
+                Links
+            </div>
+            <div class="content">
+                Link zur Bearbeitung: <a href="www.bookme.ch/admin?id=fd0edde9ab9ede99">www.bookme.ch/admin?id=fd0edde9ab9ede99</a><br/>
+                Link zur Reservation: <a href="www.bookme.ch/book?id=fd0edde9ab9ede99">www.bookme.ch/book?id=fd0edde9ab9ede99</a>
+            </div>
+        </div>
+        <div id="images" class="widget" style="display: none">
             <div class="head">
                 Bilder hinzufügen
             </div>
@@ -38,7 +57,7 @@
                 ..             
             </div>
         </div>
-        <div class="widget visible">
+        <div id="files" class="widget" style="display: none">
             <div class="head">
                 Dateien hinzufügen
             </div>
