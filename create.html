@@ -34,13 +34,13 @@
                 <tr>
                     <td/>
                     <td>
-                        <input type="submit" id="create" name="create" class="saveObjectButton" value="Objekt erstellen"/>
-                        <input type="submit" id="save" name="save" class="saveObjectButton hidden" value="Änderungen speichern"/>
+                        <input type="submit" id="create" name="create" value="Objekt erstellen"/>
+                        <input type="submit" id="save" name="save" class="hidden" value="Änderungen speichern"/>
                     </td>
                 </tr>
             </table>
         </div>
-        <div id="links" class="widget" style="display: none">
+        <div class="widget" style="display: none">
             <div class="head">
                 Links
             </div>
@@ -49,17 +49,44 @@
                 Link zur Reservation: <a href="www.bookme.ch/book?id=fd0edde9ab9ede99">www.bookme.ch/book?id=fd0edde9ab9ede99</a>
             </div>
         </div>
-        <div id="images" class="widget" style="display: none">
+        <div class="widget">
             <div class="head">
-                Bilder hinzufügen
+                Bilder
             </div>
             <div class="content">
-                ..             
+                <div class="image">
+                    <img class="thumb" alt="1" src="images/1.png">
+                    <div class="remove" onClick="alert(1);">X</div>
+                </div>
+                <div class="image">
+                    <img class="thumb" alt="2" src="images/2.png">
+                    <div class="remove" onClick="alert(2);">X</div>
+                </div>
+                <div class="image">
+                    <img class="thumb" alt="3" src="images/3.png">
+                    <div class="remove" onClick="alert(3);">X</div>
+                </div>
+                <div class="image">
+                    <img class="thumb" alt="4" src="images/4.png">
+                    <div class="remove" onClick="alert(4);">X</div>
+                </div>
+                <div class="image">
+                    <img class="thumb" alt="5" src="images/5.png">
+                    <div class="remove" onClick="alert(5);">X</div>
+                </div>
+                <div class="image">
+                    <img class="thumb" alt="6" src="images/6.png">
+                    <div class="remove" onClick="alert(6);">X</div>
+                </div>
+                <form action="#">
+                    <input type="file" name="image" id="imageInput"><br>
+                    <input type="submit" value="Hinzufügen">
+                </form>
             </div>
         </div>
-        <div id="files" class="widget" style="display: none">
+        <div class="widget" style="display: none">
             <div class="head">
-                Dateien hinzufügen
+                Dateien
             </div>
             <div class="content">
                 ..             

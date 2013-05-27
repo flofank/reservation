@@ -69,8 +69,7 @@ body {
 
 .widget .content {
     width: 100%;
-    margin-bottom: 20px;
-    padding-top: 20px;
+    padding: 20px;
     padding-left: 40px;
     padding-right: 40px;
     display: none;
@@ -143,23 +142,6 @@ ul {
 .form input {
     line-height: 20px;
 }
-input.saveObjectButton {
-    background: -webkit-linear-gradient(#BFB 5%, #5D5 20%, #5D5 60%, #3B3 90%);
-    border: 2px solid #AFA;
-    border-radius: 8px;
-    font-size: 12pt;
-    font-weight: bold;
-    color: #252;
-    padding: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-}
-
-input.saveObjectButton:hover {
-    background: -webkit-linear-gradient(#2A2 5%, #3B3 20%, #3B3 80%, #191 90%);
-    border: 2px solid #3B3;
-    cursor: pointer;
-}
 
 #galleria {
     height: 400px;
@@ -186,4 +168,31 @@ body .galleria-container {
 
 .hidden {
     display: none;
+}
+
+img.thumb {
+    margin: 0 auto;
+    height: 120px;
+    display: inline;
+}
+
+div.image {
+    padding: 5px;
+    margin: 0;
+    background: #EEE;
+    display: inline-block;
+    border: 1px solid #CCC;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+div.remove {
+    display: inline-block;
+    font-weight: bold;
+    color: #F55;
+    cursor: pointer;
+    vertical-align: top;
+}
+div.remove:hover {
+    color: #B22;
 }
