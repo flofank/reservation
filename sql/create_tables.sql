@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 27. Mai 2013 um 18:07
+-- Erstellungszeit: 27. Mai 2013 um 23:20
 -- Server Version: 5.5.27
 -- PHP-Version: 5.4.7
 
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `file` (
   `DESCRIPTION` varchar(50) NOT NULL,
   `FILE_NAME` varchar(100) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=uft8 AUTO_INCREMENT=2 ;
 
 --
 -- Daten für Tabelle `file`
@@ -51,12 +51,12 @@ INSERT INTO `file` (`ID`, `OBJEKT_ID`, `NAME`, `DESCRIPTION`, `FILE_NAME`) VALUE
 CREATE TABLE IF NOT EXISTS `objekt` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `NAME` varchar(100) NOT NULL,
-  `DESCRIPTION` text NOT NULL,
+  `DESCRIPTION` mediumtext NOT NULL,
   `CREATION_DATE` date NOT NULL,
-  `ADMIN_LINK` text NOT NULL,
-  `RESERV_LINK` text NOT NULL,
+  `ADMIN_LINK` mediumtext NOT NULL,
+  `RESERV_LINK` mediumtext NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- Daten für Tabelle `objekt`
@@ -78,7 +78,7 @@ CREATE TABLE IF NOT EXISTS `picture` (
   `DESCRIPTION` varchar(50) NOT NULL,
   `FILE_NAME` varchar(100) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=uft8 AUTO_INCREMENT=9 ;
 
 --
 -- Daten für Tabelle `picture`
@@ -90,7 +90,9 @@ INSERT INTO `picture` (`ID`, `OBJEKT_ID`, `NAME`, `DESCRIPTION`, `FILE_NAME`) VA
 (3, 1, 'img3', 'some Image', '3.png'),
 (4, 1, 'img4', 'some Image', '4.png'),
 (5, 1, 'img5', 'some Image', '5.png'),
-(6, 1, 'img6', 'some Image', '6.png');
+(6, 1, 'img6', 'some Image', '6.png'),
+(7, 1, 'bild 0', 'Casa Capuns', '0.png'),
+(8, 1, 'bild 7', 'Ein weiteres Bild', '7.png');
 
 -- --------------------------------------------------------
 
@@ -105,7 +107,7 @@ CREATE TABLE IF NOT EXISTS `reservation` (
   `END_DATE` date NOT NULL,
   `STATUS` int(11) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=uft8 AUTO_INCREMENT=1 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

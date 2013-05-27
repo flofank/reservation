@@ -101,6 +101,7 @@ a.file {
     line-height: 22px;
     background-repeat: repeat;
     text-decoration: none;
+    white-space: nowrap;
 }
 
 a.file:hover {
