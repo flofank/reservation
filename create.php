@@ -5,7 +5,7 @@
     <div id="hintbox" class="green hidden">
         Hier steht ein Hinweis zu den gemachten Eingaben.
     </div>
-    <table class="form">
+    <table class="form" method="post" action="index.php">
         <tr>
             <td>Bezeichnung</td>
             <td><input type="text" name="title" size="40"/></td>                

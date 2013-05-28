@@ -13,9 +13,8 @@
         $db = mysql_connect('localhost', 'root', '');    
         mysql_select_db('reservation', $db);
 
-        $show = isset($_GET['show']);
-        $create = isset($_GET['create']);
-        $admin = isset($_GET['admin']);
+        $isShow = isset($_GET['show']);
+        $iSAdmin = isset($_GET['admin']);
     ?>
 </head>
 <body>
@@ -24,12 +23,10 @@
     </div>
     <div id="content">
         <?php
-            if ($show) {
+            if ($isShow) {
                 include('show.php');              
-            } else if ($admin) {
+            } else if ($iSAdmin) {
                 include('admin.php');
-            } else if ($create) {
-                include('create.php');
             } else {
                 include('welcome.php');
             }
