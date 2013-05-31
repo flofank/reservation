@@ -7,7 +7,6 @@
     <link rel="stylesheet" type="text/css" href="css/calendar.css" />
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/calendar.js"></script>
-    <script type="text/javascript" src="galleria/galleria-1.2.9.min.js"></script>
     <title>BookMe</title>
     <?php
         $db = mysql_connect('localhost', 'root', '');    

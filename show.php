@@ -98,20 +98,27 @@
         <?php echo $objekt['DESCRIPTION'] ?>
     </div>
 </div>
+<?php
+    if ($img =  mysql_fetch_array($images)) { //Check if there are any images?
+?>
 <div class="widget">
     <div class="head">
         Fotos
     </div>
-    <div class="content" >
+    <div class="content" style="padding: 0;">
         <div id="galleria">
             <?php
-                while($img = mysql_fetch_array($images)) {
+                do {
                     echo "<img src='images/" . $img['FILE_NAME'] . "' data-title='" . $img['DESCRIPTION'] . "' />";
-                }
+                } while($img = mysql_fetch_array($images));
             ?>
         </div>
     </div>
+    <script type="text/javascript" src="galleria/galleria-1.2.9.min.js"></script>
 </div>
+<?php
+    }
+?>
 <div class="widget">
     <div class="head">
         Downloads

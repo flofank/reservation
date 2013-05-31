@@ -9,12 +9,6 @@ $('document').ready(function() {
        $(this).parent().children('.content').slideToggle();
    });
    
-   $('#save').click(function() {
-       $('#hintbox').hide();
-       $('#hintbox').html("Änderungen wurden gespeichert.");
-       $('#hintbox').fadeIn();
-   });
-   
    $('document').ready(function() {
        Galleria.loadTheme('galleria/galleria.classic.min.js');
         Galleria.run('#galleria', {
@@ -27,27 +21,64 @@ function createObject() {
    if (!callRunning) {
         var name = $("[name='name']").val();
         if (name == "") {
-            $('#hintbox').html("Bitte Bezeichnung eingeben.");
-            $('#hintbox').removeClass("green");
-            $('#hintbox').addClass("red");
-            $('#hintbox').fadeIn();
+            showError("Bitte Bezeichnung eingeben.");
         } else {
-            var desc = $("[name='description']").val();
+            var descr = $("[name='description']").val();
             callRunning = true;
-            $.get('php/create.php?name=' + name + "&description=" + desc, function(data) {
+            $.get('php/create.php?name=' + name + "&description=" + descr, function(data) {
                 if (data.length) {
-                    $('#hintbox').hide();
-                    $('#hintbox').html("Objekt wurde erstellt: " + data);
-                    $('#hintbox').removeClass("red");
-                    $('#hintbox').addClass("green");
-                    $('#hintbox').fadeIn();
+                    showHint("Objekt wurde erstellt: " + data);
                 }
                 $.get('php/adminWidgets.php?admin=' + data, function(html) {
                     $('#content').append(html);                    
                 });
                 callRunning = false;
+                hideLoading();
             });
         }
    }       
 }
 
+function saveChanges() {
+    if (!callRunning) {
+        var name = $("[name='name']").val();
+        if (name == "") {
+            showError("Bitte Bezeichnung eingeben.");
+        } else {
+            var descr = $("[name='description']").val();
+            var id = $("[name='id']").val();
+            var hash = $("[name='hash']").val();
+            callRunning = true;
+            showLoading();
+            $.get('php/save.php?name=' + name + '&description=' + descr + '&id=' + id + '&hash=' + hash, function(data) {
+               console.log(data);
+               callRunning = false;
+               showHint("Änderungen wurden gespeichert.");
+            });            
+        }        
+    }
+}
+
+function showHint(hint) {
+    $('#hintbox').hide();
+    $('#hintbox').removeClass("red");
+    $('#hintbox').addClass("green");
+    $('#hintbox').html(hint);
+    $('#hintbox').fadeIn();
+}
+
+function showError(error) {
+    $('#hintbox').hide();
+    $('#hintbox').removeClass("green");
+    $('#hintbox').addClass("red");
+    $('#hintbox').html(error);
+    $('#hintbox').fadeIn();    
+}
+
+function showLoading() {
+    $('#hintbox').hide();
+    $('#hintbox').removeClass("green");
+    $('#hintbox').removeClass("red");
+    $('#hintbox').html("<img src='icon/loading_icon.gif'/ height='13px'> Lädt");
+    $('#hintbox').fadeIn();   
+}

@@ -150,11 +150,15 @@ ul {
 
 body .galleria-container { 
     background: #080820; 
+    box-shadow: inset 0px 0px 20px 5px #000;
 }
 
 #hintbox {
     padding: 12px;
     margin-bottom: 10px;
+    border: 1px solid #DDD;
+    background-color: #EEF;
+    color: #666;
 }
 #hintbox.red {
     background-color: #FBA;
@@ -167,9 +171,6 @@ body .galleria-container {
     border: 1px solid #5F5;
 }
 
-.hidden {
-    display: none;
-}
 
 img.thumb {
     margin: 0 auto;
@@ -196,4 +197,11 @@ div.remove {
 }
 div.remove:hover {
     color: #B22;
+}
+
+/*
+    Helpers
+*/
+.hidden {
+    display: none;
 }

@@ -11,20 +11,20 @@
             Hier steht ein Hinweis zu den gemachten Eingaben.
         </div>
         <table class="form">
-            <tr>
-                <td>Bezeichnung</td>
-                <td><input type="text" name="name" size="40"/></td>                
-            </tr>
-            <tr>
-                <td>Beschreibung</td>
-                <td><textarea cols="50" rows="10" name="description"></textarea></td>
-            </tr>
-            <tr>
-                <td/>
-                <td>
-                    <input type="submit" id="create" value="Objekt erstellen" onClick="createObject();"/>
-                </td>
-            </tr>
+                <tr>
+                    <td>Bezeichnung:</td>
+                    <td><input type="text" name="name" size="40" placeholder="Bezeichnung" required="true"/></td>                
+                </tr>
+                <tr>
+                    <td>Beschreibung:</td>
+                    <td><textarea cols="50" rows="10" name="description"></textarea></td>
+                </tr>
+                <tr>
+                    <td/>
+                    <td>
+                        <input type="submit" id="create" value="Objekt erstellen" onClick="createObject();"/>
+                    </td>
+                </tr>
         </table>
     </div>
 <?php
@@ -49,20 +49,22 @@
         </div>
         <div id="hintbox" class="green hidden"></div>
         <table class="form">
-            <tr>
-                <td>Bezeichnung</td>
-                <td><input type="text" name="title" size="40"/></td>                
-            </tr>
-            <tr>
-                <td>Beschreibung</td>
-                <td><textarea cols="50" rows="10" name="beschreibung"></textarea></td>
-            </tr>
-            <tr>
-                <td/>
-                <td>
-                    <input type="submit" id="save" name="save" value="Änderungen speichern"/>
-                </td>
-            </tr>
+                <tr>
+                    <td>Bezeichnung</td>
+                    <td><input type="text" name="name" size="40" value="<?php echo $objekt['NAME'];?>" required="true"/></td>                
+                </tr>
+                <tr>
+                    <td>Beschreibung</td>
+                    <td><textarea cols="50" rows="10" name="description"><?php echo $objekt['DESCRIPTION'];?></textarea></td>
+                </tr>
+                <tr>
+                    <td/>
+                    <td>
+                        <input type="hidden" name="id" value="<?php echo $objekt['ID'];?>"/>
+                        <input type="hidden" name="hash" value="<?php echo $objekt['ADMIN_LINK'];?>"/>
+                        <input type="submit" id="save" onClick="saveChanges()" value="Änderungen speichern"/>
+                    </td>
+                </tr>
         </table>
     </div>
     <div class="widget">
