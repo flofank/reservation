@@ -1,6 +1,6 @@
 <?php
     if (isset($_GET['admin'])) {
-        $db = mysql_connect('localhost', 'root', '');    
+        $db = mysql_connect('localhost', 'root', 'pw_4_reserv');    
         mysql_select_db('reservation', $db);
         $admin = $_GET['admin'];
         $res = mysql_query("select * from objekt where admin_link = '$admin'", $db);
