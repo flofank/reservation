@@ -9,7 +9,7 @@
     <script type="text/javascript" src="js/calendar.js"></script>
     <title>BookMe - Das Reservationssystem</title>
     <?php
-        $db = mysql_connect('localhost', 'root', 'pw_4_reserv');    
+        $db = mysql_connect('localhost', 'reservation', 'pw_4_reserv');    
         mysql_select_db('reservation', $db);
 
         $isShow = isset($_GET['show']);

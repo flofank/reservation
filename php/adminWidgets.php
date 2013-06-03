@@ -1,6 +1,6 @@
 <?php
     if (isset($_GET['admin'])) {
-        $db = mysql_connect('localhost', 'root', 'pw_4_reserv');    
+        $db = mysql_connect('localhost', 'reservation', 'pw_4_reserv');    
         mysql_select_db('reservation', $db);
         $admin = $_GET['admin'];
         $res = mysql_query("select * from objekt where admin_link = '$admin'", $db);
@@ -8,6 +8,8 @@
         $files = mysql_query("select * from file where objekt_id=" . $objekt['ID'] . " order by FILE_NAME asc");
         $pictures = mysql_query("select * from picture where objekt_id =" . $objekt['ID'] . " order by FILE_NAME asc");
 ?>
+<input type="hidden" name="id" value="<?php echo $objekt['ID'];?>"/>
+<input type="hidden" name="hash" value="<?php echo $objekt['ADMIN_LINK'];?>"/>
 <div class="widget">
         <div class="head">
             Bilder

@@ -60,8 +60,6 @@
                 <tr>
                     <td/>
                     <td>
-                        <input type="hidden" name="id" value="<?php echo $objekt['ID'];?>"/>
-                        <input type="hidden" name="hash" value="<?php echo $objekt['ADMIN_LINK'];?>"/>
                         <input type="submit" id="save" onClick="saveChanges()" value="Änderungen speichern"/>
                     </td>
                 </tr>

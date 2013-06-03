@@ -1,5 +1,5 @@
 <?php
-    $db = mysql_connect('localhost', 'root', 'pw_4_reserv');    
+    $db = mysql_connect('localhost', 'reservation', 'pw_4_reserv');    
     mysql_select_db('reservation', $db);
     $name = mysql_real_escape_string($_GET['name']);
     $description = mysql_real_escape_string($_GET['description']);

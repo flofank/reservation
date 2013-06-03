@@ -1,6 +1,6 @@
 <?php  
     if ($_FILES["files"]["error"] == UPLOAD_ERR_OK) { 
-        $db = mysql_connect('localhost', 'root', 'pw_4_reserv');    
+        $db = mysql_connect('localhost', 'reservation', 'pw_4_reserv');    
         mysql_select_db('reservation', $db);
         $id = mysql_real_escape_string($_POST['id']);
         $hash = mysql_real_escape_string($_POST['hash']);

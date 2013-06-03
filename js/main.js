@@ -29,6 +29,7 @@ function createObject() {
         } else {
             var descr = $("[name='description']").val();
             callRunning = true;
+            showLoading();
             $.get('php/create.php?name=' + name + "&description=" + descr, function(data) {
                 if (data.length) {
                     showHint("Objekt wurde erstellt: " + data);
@@ -38,7 +39,9 @@ function createObject() {
                     registerWidgetToggleEvents();
                 });
                 callRunning = false;
-                hideLoading();
+                console.log($("[type=submit]"));
+                $("[type=submit]").hide();
+                $("[type=submit]").parent().append("<input type='submit' id='save' onClick='saveChanges()' value='Änderungen speichern'/>");
             });
         }
    }       
@@ -107,7 +110,6 @@ function removeImage(sender) {
 }
 
 function showHint(hint) {
-    $('#hintbox').hide();
     $('#hintbox').removeClass("red");
     $('#hintbox').addClass("green");
     $('#hintbox').html(hint);
@@ -115,7 +117,6 @@ function showHint(hint) {
 }
 
 function showError(error) {
-    $('#hintbox').hide();
     $('#hintbox').removeClass("green");
     $('#hintbox').addClass("red");
     $('#hintbox').html(error);
@@ -123,7 +124,6 @@ function showError(error) {
 }
 
 function showLoading() {
-    $('#hintbox').hide();
     $('#hintbox').removeClass("green");
     $('#hintbox').removeClass("red");
     $('#hintbox').html("<img src='icon/loading_icon.gif'/ height='13px'> Lädt");
