@@ -132,7 +132,7 @@
                 $filename = $file['FILE_NAME'];
                 $parts = preg_split("/\./", $filename);
                 $extension = end($parts);
-                echo "<a href='files/$filename' target='blank' class='file $extension'>" . $file['DESCRIPTION'] . "</a>";
+                echo "<div><a href='files/$filename' target='blank' class='file $extension'>" . $file['FILE_NAME'] . "</a></div>";
             }
         ?>
     </div>

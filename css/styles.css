@@ -105,11 +105,17 @@ a.file {
 }
 
 a.file:hover {
-    color: black;
+    color: black;    
 }
 
 a.file.pdf {
-    background-position: 130px 154px;
+    background-position: -44px -22px;
+}
+a.file.docx {
+    background-position: -22px -132px;
+}
+a.file.doc {
+    background-position: 0px -132px;
 }
 
 ul {

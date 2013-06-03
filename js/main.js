@@ -64,6 +64,48 @@ function saveChanges() {
     }
 }
 
+function uploadImage(sender) {
+    if (sender.files.length > 0) {
+        formdata = new FormData();
+        formdata.append("images", sender.files[0]);
+        formdata.append("id", $("[name='id']").val());
+        formdata.append("hash", $("[name='hash']").val());
+        $.ajax({
+           url: "php/uploadImage.php",
+           type: "POST",
+           data: formdata,
+           processData: false,
+           contentType: false,
+           success: function(res) {
+               $('#images').append(res);
+           }
+        });        
+    }
+}
+
+function uploadFile(sender) {
+   if (sender.files.length > 0) {
+       formdata = new FormData();
+       formdata.append("files", sender.files[0]);
+        formdata.append("id", $("[name='id']").val());
+        formdata.append("hash", $("[name='hash']").val());
+        $.ajax({
+           url: "php/uploadFile.php",
+           type: "POST",
+           data: formdata,
+           processData: false,
+           contentType: false,
+           success: function(res) {
+               $('#files').append(res);
+           }
+        });
+   }
+}
+
+function removeImage(sender) {
+   $(sender).parent().hide();
+}
+
 function showHint(hint) {
     $('#hintbox').hide();
     $('#hintbox').removeClass("red");

@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/calendar.css" />
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/calendar.js"></script>
-    <title>BookMe</title>
+    <title>BookMe - Das Reservationssystem</title>
     <?php
         $db = mysql_connect('localhost', 'root', '');    
         mysql_select_db('reservation', $db);
@@ -19,7 +19,7 @@
 </head>
 <body>
     <div id="head">
-        Reservationssystem Ferienwohnungen
+        BookMe - Das Reservationssystem
     </div>
     <div id="content">
         <?php

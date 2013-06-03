@@ -13,20 +13,21 @@
             Bilder
         </div>
         <div class="content">
-            <?php
-                while ($picture = mysql_fetch_array($pictures)) {
-            ?>
-                <div class="image">
-                    <img class="thumb" alt="<?php echo $picture['NAME'];?>" src="images/<?php echo $picture['FILE_NAME'];?>">
-                    <div class="remove" onClick="alert(<?php echo $picture['ID'];?>);">X</div>
-                </div>
-            <?php
-                }            
-            ?>
-            <form action="#">
-                <input type="file" name="image" id="imageInput"><br>
-                <input type="submit" value="Hinzufügen">
-            </form>
+            <div id="images">
+                <?php
+                    while ($picture = mysql_fetch_array($pictures)) {
+                ?>
+                    <div class="image">
+                        <img class="thumb" alt="<?php echo $picture['NAME'];?>" src="images/<?php echo $picture['FILE_NAME'];?>">
+                        <!--<div class="remove" onClick="alert(<?php echo $picture['ID'];?>);">X</div>-->
+                        <div class="remove" onClick="removeImage(this);">X</div>
+                    </div>
+                <?php
+                    }            
+                ?>
+            </div>
+            <br/>
+            Bild hinzufügen: <input type="file" name="fileElem[]" id="imageInput" multiple="false" accept="image/*" onChange="uploadImage(this);"><br>
         </div>
     </div>
     <div class="widget">
@@ -34,16 +35,20 @@
             Dateien
         </div>
         <div class="content">
-            <?php
-                while ($file = mysql_fetch_array($files)) {
-                    $filename = $file['FILE_NAME'];
-                    $parts = preg_split("/\./", $filename);
-                    $extension = end($parts);
-                    $id = $file['ID'];
-                    echo "<a href='files/$filename' target='blank' class='file $extension'>" . $file['DESCRIPTION'] . "</a>";
-                    echo "<div class='remove' onClick='alert($id);'>X</div>";
-                }    
-            ?>
+            <div id="files">
+                <?php
+                    while ($file = mysql_fetch_array($files)) {
+                        $filename = $file['FILE_NAME'];
+                        $parts = preg_split("/\./", $filename);
+                        $extension = end($parts);
+                        $id = $file['ID'];
+                        echo "<div><div class='remove' onClick='alert($id);'>X </div>";
+                        echo "<a href='files/$filename' target='blank' class='file $extension'>" . $file['FILE_NAME'] . "</a></div>";
+                    }    
+                ?>
+            </div>
+            <br/>
+            Datei hinzufügen: <input type="file" name="fileElem[]" id="fileInput" multiple="false" onChange="uploadFile(this);">
         </div>
     </div>
     <div class="widget">
