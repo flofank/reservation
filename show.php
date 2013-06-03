@@ -61,29 +61,31 @@
     </div>
     <div class="content">
         <table class="form">
-            <form action="" autocomplete="on">
+            <form action="index.php?book" autocomplete="on">
                 <tr>
                     <td>Name:</td>
-                    <td><input type="text" size="40" placeholder="Name" required="true"></input></td>
+                    <td><input type="text" size="40" name="name" placeholder="Name" required="true"></input></td>
                 </tr>
                 <tr>
                     <td>E-Mail:</td>
-                    <td><input type="email" size="40" placeholder="E-Mail"></input></td>
+                    <td><input type="email" size="40" name="mail" placeholder="E-Mail"></input></td>
                 </tr>
                 <tr>
                     <td>
                         Reservationszeit:
                     </td>
                     <td>
-                        <input type="date" required="true" placeholder="Von"></input> 
+                        <input type="date" required="true" name="dateFrom" placeholder="Von"></input> 
                         bis 
-                        <input type="date" required="true" placeholder="Bis"></input>
+                        <input type="date" required="true" name="dateTo" placeholder="Bis"></input>
                     </td>
                 </tr>
                 <tr>
                     <td>Reservationsmitteilung:</td><td><textarea cols="50" rows="10"></textarea></td></tr>
                 </tr>
                 <tr>
+                    <input type="hidden" name="id" value="<?php echo $objekt['ID'];?>"/>
+                    <input type="hidden" name="hash" value="<?php echo $objekt['RESERV_LINK'];?>"/>
                     <td></td><td><input type="submit" value="Anfrage abschicken"/></td>
                 </tr>
             </form>

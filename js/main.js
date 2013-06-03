@@ -5,9 +5,7 @@
 var callRunning = false;
 
 $('document').ready(function() {
-   $('.widget .head').click(function() {
-       $(this).parent().children('.content').slideToggle();
-   });
+    registerWidgetToggleEvents();
    
    $('document').ready(function() {
        Galleria.loadTheme('galleria/galleria.classic.min.js');
@@ -16,6 +14,12 @@ $('document').ready(function() {
         });
    });
 });
+
+function registerWidgetToggleEvents() {
+   $('.widget .head').click(function() {
+       $(this).parent().children('.content').slideToggle();
+   });
+}
 
 function createObject() {
    if (!callRunning) {
@@ -30,7 +34,8 @@ function createObject() {
                     showHint("Objekt wurde erstellt: " + data);
                 }
                 $.get('php/adminWidgets.php?admin=' + data, function(html) {
-                    $('#content').append(html);                    
+                    $('#content').append(html);   
+                    registerWidgetToggleEvents();
                 });
                 callRunning = false;
                 hideLoading();
